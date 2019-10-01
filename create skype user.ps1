@@ -12,7 +12,7 @@ Function Connect-Exchange {
 
     param(
         [Parameter( Mandatory=$false)]
-        [string]$URL="dc1prdexc01.internal.********.gov.au"
+        [string]$URL="dc1prdexc01.internal.********.***.au"
     )
     
     $ExOPSession = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri http://$URL/PowerShell/ -Authentication Kerberos
@@ -44,41 +44,41 @@ If ($site -like "ADL"){
     $profile.site = "Adelaide"
     $profile.voiceplan = "AU-ADL-VP"
     $profile.dialplan = "AU-ADL-DP"
-    $profile.LineURIPrefix = "tel:+6188235"
+    $profile.LineURIPrefix = "tel:+61*****"
     $profile.extension ="4"+ $Extension.Substring($Extension.length - 3)
-    $profile.pool = "ADLPRDSBA10.internal.********.gov.au"
+    $profile.pool = "ADL****BA10.internal.********.***.au"
 
 }elseif ($site -like "BNE") {
     $profile.site = "Brisbane"
     $profile.voiceplan = "AU-BNE-VP"
     $profile.dialplan = "AU-BNE-DP"
-    $profile.LineURIPrefix = "tel:+6173001"
+    $profile.LineURIPrefix = "tel:+61*****"
     $profile.extension = $Extension
-    $profile.pool = "BNEPRDSBA10.internal.********.gov.au"
+    $profile.pool = "BNE****BA10.internal.********.****.au"
     
 }elseif ($site -like "MEL") {
     $profile.Site = "Melbourne"
     $profile.voiceplan = "AU-MEL-VP"
     $profile.dialplan = "AU-MEL-DP"
-    $profile.LineURIPrefix = "tel:+6139246"
+    $profile.LineURIPrefix = "tel:+61*****"
     $profile.extension = $Extension
-    $profile.pool = "MELPRDSBA10.internal.********.gov.au"
+    $profile.pool = "MEL****BA10.internal.********.****.au"
 }elseif ($site -like "CBR") {
     $profile.site = "Canberra"
     $profile.voiceplan = "AU-CBR-VP"
     $profile.dialplan = "AU-CBR-DP"
-    $profile.LineURIPrefix = "tel:+6126213"
+    $profile.LineURIPrefix = "tel:+61*****"
     $profile.extension = $Extension
-    $profile.pool = "CBRPRDSBA10.internal.********.gov.au"
+    $profile.pool = "CBR****BA10.internal.********.***.au"
     
 }
 elseif ($Site -like "SYD") {
     $profile.site = "Sydney"
     $profile.voiceplan = "AU-SYD-VP"
     $profile.dialplan = "AU-SYD-DP"
-    $profile.LineURIPrefix = "tel:+6129210"
+    $profile.LineURIPrefix = "tel:+61*****"
     $profile.extension = $Extension
-    $profile.pool = "lncpool01.internal.********.gov.au"
+    $profile.pool = "lncpool01.internal.********.***.au"
 }
 
     Return $profile
