@@ -1,8 +1,8 @@
 echo "Connecting to remote "
 
-$Server="dc1prdnet40"
+$Server="dc1****net40"
 
-$User="0hxmali"
+$User="0hx****"
 
 $Password="*****"
 
